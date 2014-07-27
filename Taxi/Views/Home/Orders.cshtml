@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Orders";
+}
+@using Taxi.Controllers
+@model List<Taxi.Models.Order>
+
+<h2>Orders</h2>
+<form method="POST" action="">
+    <table>
+        <tr class="header">
+            <td>DateTime</td>
+            <td>PlaneLong</td>
+            <td>FactLong</td>
+            <td>Customer</td>
+            <td>Cost</td>
+        </tr>
+        @foreach (var b in Model)
+        {
+            <tr>
+                <td><p>@b.DateTime</p></td>
+                <td><p>@b.PlaneLong</p></td>
+                <td><p>@b.FactLong</p></td>
+                <td><p>@b.Customer.Lastname</p></td>
+                <td><p>@b.Cost</p></td>
+            </tr>
+        }
+    </table>
+    <a href="@Url.Action("CreateOrder", "Document")">Create order</a>
+    <br/>
+    <a href="@Url.Action("Main")" onclick="return confirm('Вы уверены,что хотите покинуть страницу?')">Вернуться к списку машин</a>
+</form>

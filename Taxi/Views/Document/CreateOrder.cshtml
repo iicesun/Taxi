@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "CreateOrder";
+}
+@using Taxi.Models
+@model List<Taxi.Models.Automobile>
+
+<!-- Latest compiled and minified CSS -->
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<!-- Optional theme -->
+<link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="~/Scripts/bootstrap.min.js"></script>
+<style>
+    #liniya {
+        width: 150px;
+        height: 50px;
+        float: left;
+        margin-left: 15px;
+    }
+</style>
+
+
+<h2>CreateOrder</h2>
+<form method="POST" action="">
+    <fieldset>
+        <div>
+            <div style=" width: 100%; clear: both;">
+                <div id="liniya">Enter your name</div>
+                <div id="liniya"><input type="text" name="Name" /></div>
+            </div>
+            <div style=" width: 100%; clear: both;">
+                <div id="liniya">Enter your lastname</div>
+                <div id="liniya"><input type="text" name="Lastname" /></div>
+            </div>
+            <div style=" width: 100%; clear: both;">
+                <div id="liniya">Select automobile</div>
+                <div id="liniya" style="width: 100%">
+                    <select name="Automobile">
+                        @foreach (var automobile in Model)
+                        {
+                            <option>@automobile.CarBrand   @automobile.Collor</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div style=" width: 100%; clear: both;">
+                <div id="liniya">Select date</div>
+                <div id="liniya">
+                    <input type="datetime" name="DateTime" />
+                </div>
+            </div>
+            <div style="width: 100%; clear: both;">
+                <input style ="margin-left: 180px" type="submit" value="Checkout" />
+            </div>
+        </div>
+    </fieldset>
+</form>

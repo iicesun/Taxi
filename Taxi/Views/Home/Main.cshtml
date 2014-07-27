@@ -2,4 +2,35 @@
     ViewBag.Title = "Main";
 }
 
+@model  List<Taxi.Models.Automobile>
+
+<script type="text/javascript">
+    function goToOrders(id) {
+        window.location = "@Url.Action("Orders")" +"/"+ id;
+    }
+</script>
+
 <h2>Main</h2>
+<form method="POST" action="">
+    <table>
+        <tr class="header">
+            <td>Car Brand</td>
+            <td>Year Make</td>
+            <td>Collor</td>
+            <td>Mileage</td>
+            <td></td>
+        </tr>
+        @foreach (var b in Model)
+        {
+            <tr>
+                <td><p>@b.CarBrand</p></td>
+                <td><p>@b.YearMake</p></td>
+                <td><p>@b.Collor</p></td>
+                <td><p>@b.Mileage</p></td>
+                @*<td><p><a href="@Url.Action("Orders", new { id = @b.Id})">Показать заказы</a></td>*@
+                <td><input  type="button" onclick="goToOrders(@b.Id)" value="-&gt;"/></td>
+            </tr>
+        }
+    </table>    
+</form>
+
