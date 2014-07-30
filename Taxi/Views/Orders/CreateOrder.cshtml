@@ -23,35 +23,45 @@
     }
 </style>
 
-
-<h2>CreateOrder</h2>
-<form method="POST" action="">
-    <fieldset>
-        <div>
-            <div style=" width: 100%; clear: both;">
-                <div id="liniya">Enter user</div>
-                <div id="liniya">@Html.DropDownListFor(list => list.Customers, new SelectList(Model.Customers, "Id"))</div>
-            </div>
-            <div style=" width: 100%; clear: both;">
-                <div id="liniya">Select automobile</div>
-                <div id="liniya" >
-                    <select name="Automobiles">
-                        @foreach (var automobile in Model.Automobiles)
-                        {
-                            <option>@Html.DropDownListFor(list => list.Automobiles, new SelectList(Model.Automobiles, "Id"))</option>
-                        }
-                    </select>
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Datepicker - Animations</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script>
+        $(function () {
+            $("#datepicker").datepicker({showAnim:"slideDown"});
+        });
+    </script>
+</head>
+<body>
+    <h2>CreateOrder</h2>
+    <form method="POST" action="">
+        <fieldset>
+            <div>
+                <div style=" width: 100%; clear: both;">
+                    <div id="liniya">Enter user</div>
+                    <div id="liniya">@Html.DropDownListFor(list => list.Customers, new SelectList(Model.Customers, "Id"))</div>
+                </div>
+                <div style=" width: 100%; clear: both;">
+                    <div id="liniya">Select automobile</div>
+                    <div id="liniya">
+                        @Html.DropDownListFor(list => list.Automobiles, new SelectList(Model.Automobiles, "Id"))
+                    </div>
+                </div>
+                <div style=" width: 100%; clear: both;">
+                    <div id="liniya">Select date</div>
+                    <div id="liniya"><input type="text" id="datepicker" size="30"></div>
+                </div>
+                <div style="width: 100%; clear: both;">
+                    <input style="margin-left: 180px" type="submit" value="Checkout" />
                 </div>
             </div>
-            <div style=" width: 100%; clear: both;">
-                <div id="liniya">Select date</div>
-                <div id="liniya">
-                    <input type="datetime" name="DateTime" />
-                </div>
-            </div>
-            <div style="width: 100%; clear: both;">
-                <input style ="margin-left: 180px" type="submit" value="Checkout" />
-            </div>
-        </div>
-    </fieldset>
-</form>
+        </fieldset>
+    </form>
+</body>
+</html>
