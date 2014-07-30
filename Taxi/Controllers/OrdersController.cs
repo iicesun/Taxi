@@ -8,22 +8,30 @@ using Taxi.Service;
 
 namespace Taxi.Controllers
 {
-    public class DocumentController : Controller
+    public class OrdersController : Controller
     {
         //
         // GET: /Document/
         private TaxiService taxiService;
 
-        public DocumentController()
+        public OrdersController()
         {
             taxiService = new TaxiService();
         }
 
         public ActionResult CreateOrder()
         {
-            List<Automobile> automobiles = taxiService.GetAutomobileCollection();
-            return View(automobiles);
+            var model = new CreateOrderModel();
+            model.Automobiles = taxiService.GetAutomobileCollection();
+            model.Customers = taxiService.GetCustomers();
+            return View(model);
         }
 
+       /* [HttpPost]
+        public ActionResult CreateOrder(Order order)
+        {
+            
+        }
+*/
     }
 }

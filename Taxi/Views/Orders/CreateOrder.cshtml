@@ -1,8 +1,10 @@
 ﻿@{
     ViewBag.Title = "CreateOrder";
 }
+
 @using Taxi.Models
-@model List<Taxi.Models.Automobile>
+@using SelectListItem = System.Web.WebPages.Html.SelectListItem
+@model CreateOrderModel
 
 <!-- Latest compiled and minified CSS -->
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
@@ -27,20 +29,16 @@
     <fieldset>
         <div>
             <div style=" width: 100%; clear: both;">
-                <div id="liniya">Enter your name</div>
-                <div id="liniya"><input type="text" name="Name" /></div>
-            </div>
-            <div style=" width: 100%; clear: both;">
-                <div id="liniya">Enter your lastname</div>
-                <div id="liniya"><input type="text" name="Lastname" /></div>
+                <div id="liniya">Enter user</div>
+                <div id="liniya">@Html.DropDownListFor(list => list.Customers, new SelectList(Model.Customers, "Id"))</div>
             </div>
             <div style=" width: 100%; clear: both;">
                 <div id="liniya">Select automobile</div>
-                <div id="liniya" style="width: 100%">
-                    <select name="Automobile">
-                        @foreach (var automobile in Model)
+                <div id="liniya" >
+                    <select name="Automobiles">
+                        @foreach (var automobile in Model.Automobiles)
                         {
-                            <option>@automobile.CarBrand   @automobile.Collor</option>
+                            <option>@Html.DropDownListFor(list => list.Automobiles, new SelectList(Model.Automobiles, "Id"))</option>
                         }
                     </select>
                 </div>

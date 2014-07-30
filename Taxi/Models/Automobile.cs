@@ -7,5 +7,9 @@
         public string YearMake { get; set; }
         public string Collor { get; set; }
         public int Mileage { get; set; }
+        public override string ToString()
+        {
+            return CarBrand + " " + Collor;
+        }
     }
 }
