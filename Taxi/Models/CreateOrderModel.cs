@@ -10,5 +10,6 @@ namespace Taxi.Models
         public Order Order { get; set; }
         public List<Automobile> Automobiles { get; set; }
         public List<Customer> Customers { get; set; }
+        public int IdSelectAutomobile { get; set; }
     }
 }

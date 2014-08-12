@@ -31,7 +31,6 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
-    <link rel="stylesheet" href="/resources/demos/style.css">
     <script>
         $(function () {
             $("#datepicker").datepicker({showAnim:"slideDown"});
@@ -50,7 +49,7 @@
                 <div style=" width: 100%; clear: both;">
                     <div id="liniya">Select automobile</div>
                     <div id="liniya">
-                        @Html.DropDownListFor(list => list.Automobiles, new SelectList(Model.Automobiles, "Id"))
+                        @Html.DropDownListFor(list => list.IdSelectAutomobile, new SelectList(Model.Automobiles, "Id"))
                     </div>
                 </div>
                 <div style=" width: 100%; clear: both;">
