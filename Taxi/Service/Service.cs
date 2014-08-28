@@ -40,9 +40,9 @@ namespace Taxi.Service
             return dbTaxi.Orders;
         }
 
-        public void SetOrdersAutomobile(CreateOrderModel createOrderModel)
+        public void SetOrdersAutomobile(Order order)
         {
-            dbTaxi.Orders 
+            dbTaxi.Orders.Add(order);
         }
     }
 
@@ -67,6 +67,6 @@ namespace Taxi.Service
         /// <returns>Список заказов у автомобиля</returns>
         List<Order> GetOrdersAutomobile(Automobile automobile);
 
-        void SetOrdersAutomobile(CreateOrderModel createOrderModel)
+        void SetOrdersAutomobile(Order order)
     }
 }

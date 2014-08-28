@@ -40,6 +40,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -114,6 +117,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ServiceLocator.cs" />
+    <Compile Include="Mapping\Mapper.cs" />
+    <Compile Include="Mapping\OrderMapper.cs" />
     <Compile Include="Models\CreateOrderModel.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,6 +126,7 @@
     <Compile Include="Models\Order.cs" />
     <Compile Include="Service\InitializationDateBaseTaxi.cs" />
     <Compile Include="Service\Service.cs" />
+    <Compile Include="Tests\TDDMapping.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />

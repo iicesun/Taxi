@@ -31,7 +31,7 @@ namespace Taxi.Controllers
         [HttpPost]
         public ActionResult CreateOrder(CreateOrderModel createOrderModel)
         {
-
+            taxiService.SetOrdersAutomobile();
             return Redirect(Url.Action("Orders", "Home", new {Id = 1}));
         }
     }

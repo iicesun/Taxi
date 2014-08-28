@@ -29,7 +29,7 @@ namespace Taxi.Service
             Automobiles.Add(new Automobile()
             {
                 Id = 1,
-                CarBrand = "BMW",
+                CarBrand = "все хуйня давай по новой",
                 Collor = "Black",
                 YearMake = "2014",
                 Mileage = 100000

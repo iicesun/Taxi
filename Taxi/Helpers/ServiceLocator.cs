@@ -30,7 +30,7 @@ namespace Taxi.Helpers
         {
             if (!_services.ContainsKey(typeof (T)))
             {
-              throw new Exception("Не удалось найти тип " + typeof(T));
+              throw new Exception("Не удалось найти тип "+ typeof(T));
             }
             else  return (T) _services[typeof (T)];
         }
