@@ -26,3 +26,5 @@ D:\Repositories\Taxi\Taxi\bin\System.Web.WebPages.Razor.xml
 D:\Repositories\Taxi\Taxi\obj\Debug\Taxi.csprojResolveAssemblyReference.cache
 D:\Repositories\Taxi\Taxi\obj\Debug\Taxi.dll
 D:\Repositories\Taxi\Taxi\obj\Debug\Taxi.pdb
+D:\Repositories\Taxi\Taxi\bin\nunit.framework.dll
+D:\Repositories\Taxi\Taxi\bin\nunit.framework.xml

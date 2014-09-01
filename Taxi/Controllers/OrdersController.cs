@@ -28,11 +28,11 @@ namespace Taxi.Controllers
             return View(model);
         }
 
-        [HttpPost]
+       /* [HttpPost]
         public ActionResult CreateOrder(CreateOrderModel createOrderModel)
         {
             taxiService.SetOrdersAutomobile();
             return Redirect(Url.Action("Orders", "Home", new {Id = 1}));
-        }
+        }*/
     }
 }

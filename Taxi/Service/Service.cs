@@ -67,6 +67,6 @@ namespace Taxi.Service
         /// <returns>Список заказов у автомобиля</returns>
         List<Order> GetOrdersAutomobile(Automobile automobile);
 
-        void SetOrdersAutomobile(Order order)
+        void SetOrdersAutomobile(Order order);
     }
 }
